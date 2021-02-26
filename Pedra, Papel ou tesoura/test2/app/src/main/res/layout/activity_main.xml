@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="50sp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/resultadoImagem"
+        android:layout_width="205dp"
+        android:layout_height="191dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/escolhaApp"
+        app:srcCompat="@drawable/padrao" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/linha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <ImageView
+        android:id="@+id/imgview"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="112dp"
+        android:onClick="papel"
+        app:layout_constraintEnd_toStartOf="@+id/imgview1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultado"
+        app:srcCompat="@drawable/papel" />
+
+    <ImageView
+        android:id="@+id/imgview1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="208dp"
+        android:onClick="pedra"
+        app:layout_constraintEnd_toStartOf="@+id/imgview2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imgview"
+        app:layout_constraintTop_toBottomOf="@+id/resultadoImagem"
+        app:srcCompat="@drawable/pedra" />
+
+    <ImageView
+        android:id="@+id/imgview2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="112dp"
+        android:onClick="tesoura"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imgview1"
+        app:layout_constraintTop_toBottomOf="@+id/resultado"
+        app:srcCompat="@drawable/tesoura" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="0.10" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="tesoura"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="348dp"
+        app:layout_constraintGuide_percent="0.90" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="205dp"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8002736" />
+
+    <TextView
+        android:id="@+id/escolhaApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Minha escolha"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/linha"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/escolhaPessoa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="172dp"
+        android:text="Sua escolha"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/imgview1"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/resultadoImagem" />
+
+    <TextView
+        android:id="@+id/resultado"
+        android:layout_width="197dp"
+        android:layout_height="29dp"
+        android:text="Resultado"
+        app:layout_constraintBottom_toTopOf="@+id/escolhaPessoa"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/resultadoImagem"
+        app:layout_constraintVertical_bias="0.437" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
